@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naveen Resume
+    </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/log.png" class="logo" alt="">
+                <ul>
+                    <li> <a href="#">Home</a></li>
+                    <li> <a href="#">About</a></li>
+                    <li> <a href="#">Services</a></li>
+                    <li> <a href="#">Portfolio</a></li>
+                    <li> <a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Full Stack Developer</p>
+                <h1>Hello!, I am <span>Naveen</span> from India, primarly java Backend developer kg experience in Front end</h1>
+            </div>
+        </div>
+    </div> 
+    <!-- ------------about------------------ -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/me.png" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Reprehenderit distinctio molestias laudantium voluptatum cumque temporibus, tempore iusto error quae.
+                         Illum architecto tempore animi laudantium eligendi placeat cumque exercitationem voluptatibus optio.
+                         <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="openTab('skills')" >Skills</p>
+                            <p class="tab-links" onclick="openTab('experience')">Experience</p>
+                            <p class="tab-links" onclick="openTab('education')">Education</p>
+                         </div>
+                         <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Frontend development <br></span>Angular,Html,Css </li>
+                                <li><span>Backend development <br></span>Java, Spring & Azure</li>
+                            </ul>
+                         </div>
+                         <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>1.5yr-current</span>yr Epam</li>
+                                <li><span>2.5yr</span> Allianz </li>
+                                <li><span>1.8yr</span> Intellect </li>
+                                <li><span>3.5yr</span> Infosys </li>
+                                
+                                
+                            </ul>
+                         </div>
+                         <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>B.tech <br></span>Computer Science</li>
+                                <li><span>12th <br></span>PCM</li>
+                            </ul>
+                         </div>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+<script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    function openTab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+</body>
+</html>
